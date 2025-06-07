@@ -37,17 +37,17 @@ This is the backend repository for the **Real Estate Marketplace Platform (REMP)
 
 ```bash
 git clone https://github.com/your-username/real-estate-backend.git
-cd real-estate-backend
+cd real-estate-backend```
 
 2. Install dependencies:
 
 ```bash
-composer install
+composer install ```
 
 3. Copy .env.example to .env and set your environment variables:
 
 ```bash
-cp .env.example .env
+cp .env.example .env ```
 
 4. Generate application key:
 
