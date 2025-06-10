@@ -14,6 +14,7 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->enum('role', ['admin', 'buyer', 'seller'])->default('buyer');
+            $table->enum('status', ['accepted', 'rejected','pending'])->default('pending');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -34,9 +35,9 @@ return new class extends Migration
         });
     }
 
-    
+
      //Reverse the migrations.
-     
+
     public function down(): void
     {
         Schema::dropIfExists('users');

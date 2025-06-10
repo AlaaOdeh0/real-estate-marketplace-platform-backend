@@ -14,7 +14,7 @@ class CreatePropertiesTable extends Migration
             $table->decimal('price');
             $table->string('description')->nullable();
             $table->string('address');
-            $table->string('status'); 
+            $table->string('status');
             $table->decimal('bedrooms');
             $table->decimal('bathrooms');
             $table->decimal('area');
@@ -27,7 +27,7 @@ class CreatePropertiesTable extends Migration
             $table->timestamps(); });
     }
 
-  
+
     public function down()
     {
         Schema::table('properties', function (Blueprint $table) {
@@ -43,7 +43,7 @@ class CreatePropertiesTable extends Migration
             ,'agent'
             ,'features'
             ,'amount'
-            ,'date of priceCut']);
+            ]);
         });
     }
 }
