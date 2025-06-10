@@ -1,7 +1,10 @@
+
+
 # 📘 Real Estate Marketplace Platform - Backend (Laravel)
 
 ## 📂 Project Overview
 This is the backend repository for the **Real Estate Marketplace Platform (REMP)**, a web-based application built to connect property buyers, sellers, and real estate agents. The backend is developed using **Laravel 10** and serves a RESTful API consumed by the Angular frontend.
+
 
 ---
 
@@ -28,21 +31,23 @@ This is the backend repository for the **Real Estate Marketplace Platform (REMP)
 - **API**: RESTful
 - **File Storage**: Local/Cloud via Laravel Filesystem
 
----
-
  
 ## Installation
 
+
 1. Clone the repository:
+
 
 ```bash
 git clone https://github.com/your-username/real-estate-backend.git
 cd real-estate-backend```
 
+
 2. Install dependencies:
 
 ```bash
 composer install ```
+
 
 3. Copy .env.example to .env and set your environment variables:
 
