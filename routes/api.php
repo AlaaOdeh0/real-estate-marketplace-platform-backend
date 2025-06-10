@@ -3,6 +3,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PasswordResetController;
+use App\Http\Controllers\Api\MessagesController;
+use App\Http\Controllers\Api\PropertyController;
+
 
 Route::middleware('jwt.auth')->get('/auth/user', function (Request $request) {
     return $request->user();
@@ -20,3 +23,11 @@ Route::middleware('api')->group(function () {
         Route::post('/reset-password', [PasswordResetController::class, 'reset']);
     });
 });
+
+
+// Property Routes 
+Route::apiResource('properties', PropertyController::class);
+
+// Message Routes 
+Route::apiResource('messages', MessagesController::class);
+
