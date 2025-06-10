@@ -24,13 +24,20 @@ Route::delete('notifications/{id}', [NotificationController::class, 'destroy']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
-
-
-// Property Routes 
+// Property Routes
 Route::apiResource('properties', PropertyController::class);
-
-// Message Routes 
+// Message Routes
 Route::apiResource('messages', MessagesController::class);
-
-
+//
+Route::get('/user',[UserController::class,'index']);
+Route::get('/user/{id}',[UserController::class,'show']);
+Route::post('/user',[UserController::class,'store']);
+Route::patch('/user/{id}',[UserController::class,'update']);
+Route::delete('/user/{id}',[UserController::class,'destroy']);
+Route::get('/transactions/search', [TransactionController::class, 'search']);
+Route::get('/transactions', [TransactionController::class, 'index']);
+Route::get('/transactions/{id}', [TransactionController::class, 'show']);
+Route::post('/transactions', [TransactionController::class, 'store']);
+Route::patch('/transactions/{id}', [TransactionController::class, 'update']);
+Route::delete('/transactions/{id}', [TransactionController::class, 'destroy']);
+Route::get('/transactions1', [TransactionController::class, 'getTransactions']);
